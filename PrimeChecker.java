@@ -2,7 +2,7 @@ import static java.lang.System.in;
 
 class Prime {
     String string = new String();
-    public void checkPrime(int... args){
+    public void checkPrime(int... args){    //VarArgs
         for(int i : args){
             if(isPrime(i))
                 string += i+ " ";
@@ -14,7 +14,7 @@ class Prime {
     public boolean isPrime(int a){
         int maxNum = (int)Math.round(Math.sqrt(a));
         if(a<2) return false;
-        for(int i=2 ; i<=maxNum ; i++){
+        for(int i=2 ; i<=maxNum ; i++){     //only checked till square root of number
             if(a%i == 0)
                 return false;
         }
