@@ -13,19 +13,51 @@ class HashTable:
 
     def get_index(self, value):
         hash_value = hash(value)
+        return hash_value % self.size
 
     def __getitem__(self, key):
-        pass
+        index = self.get_index(key)
+        # either None 
+        if self.index_list[index] is None:
+            return None
+
+        # list
+        for row in self.index_list[index]:
+            # contains
+            if key in row:
+                return row[1]
+        # does not contain key
+        return None
+        
 
     def __setitem__(self, key, value):
-        pass
+        index = self.get_index(key)
+        # if None create a new list
+        if self.index_list[index] is None:
+            self.index_list[index] = []
+        # else list then append
+        self.index_list[index].append((key, value))
 
+    def __delitem__(self, key):
+        index = self.get_index(key)
+        if self.index_list[index] is None:
+            return None
+        for row in self.index_list[index]:
+            if key in row:
+                del self.index_list[index]
+        return None
 
 
 if __name__ == "__main__":
     ht = HashTable()
+    ht["a"] = 1
+    ht["b"] = 100
+    ht["c"] = 100
+    ht["d"] = 1002
+    ht["e"] = 1
+    
+    for row in ht.index_list:
+        if row is not None:
+            print(row)
 
-    ht.put("a", 1)
-    print(ht["a"])
-
-    # ht.get("a")
+    del ht['a']
