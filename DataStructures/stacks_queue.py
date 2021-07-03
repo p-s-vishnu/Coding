@@ -27,8 +27,9 @@ class Stack:
 
 class Queue:
     """First In First Out
-    Alternative: from collections import deque
-        append and popleft
+    Alternative: 
+        from collections import deque
+        append() and popleft()
     """
     def __init__(self):
         self.queue = []
