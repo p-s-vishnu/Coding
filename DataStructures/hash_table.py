@@ -7,6 +7,7 @@ class HashTable:
     1. Chaining
     2. Linear probing
     """
+
     def __init__(self):
         self.size = 1024
         self.index_list = [None] * self.size
@@ -17,7 +18,7 @@ class HashTable:
 
     def __getitem__(self, key):
         index = self.get_index(key)
-        # either None 
+        # either None
         if self.index_list[index] is None:
             return None
 
@@ -28,7 +29,6 @@ class HashTable:
                 return row[1]
         # does not contain key
         return None
-        
 
     def __setitem__(self, key, value):
         index = self.get_index(key)
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     ht["c"] = 100
     ht["d"] = 1002
     ht["e"] = 1
-    
+
     for row in ht.index_list:
         if row is not None:
             print(row)

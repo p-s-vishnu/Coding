@@ -1,8 +1,10 @@
 from random import randint
 
+
 class Stack:
-    """First In Last Out
+    """Last In First Out
     """
+
     def __init__(self):
         self.stack = []
 
@@ -31,6 +33,7 @@ class Queue:
         from collections import deque
         append() and popleft()
     """
+
     def __init__(self):
         self.queue = []
 
@@ -51,6 +54,7 @@ class Queue:
     def __str__(self):
         return f"Queue: {self.queue}"
 
+
 if __name__ == "__main__":
     s = Stack()
     print(s)
@@ -63,9 +67,7 @@ if __name__ == "__main__":
 
     q = Queue()
     for _ in range(5):
-        q.enqueue(randint(2,100))
+        q.enqueue(randint(2, 100))
     print(q)
     print(q.dequeue())
     print(q.size())
-
-
