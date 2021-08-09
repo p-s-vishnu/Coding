@@ -1,4 +1,4 @@
-# Grokking algorithms
+# [Grokking algorithms](https://github.com/cl2333/Grokking-the-Coding-Interview-Patterns-for-Coding-Questions)
 
 1. ## 1. Pattern: Sliding Window
    
