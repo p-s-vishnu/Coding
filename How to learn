@@ -1,0 +1,30 @@
+How to learn
+1. Quick Video to get started
+2. Code it
+3. Read an article /paper /in-depth video
+4. Document the learning / Teach it to someone
+
+5. Revise
+---------------------------
+
+Differentiate what requires depth and skimming
+> Code, Theory and the Math
+
+
+
+Common Questions
+---------------------------
+Gradient Descent 
+> Udacity
+
+Common Metrics (Maths, Code, theory)
+check sklearn: https://scikit-learn.org/stable/modules/classes.html?highlight=metrics#module-sklearn.metrics
+
+> Classification: Accuracy, Precision, Recall, F1-Score, Copens Kappa, AUC ROC, Confusion matrics
+
+> Regression: MSE, MAE, mean poisson deviation
+
+> Clustering: contingency matrix, WCSS (Within cluster sum of sqaure distance), Silhoutte score
+
+Cost functions
+> Log loss, 

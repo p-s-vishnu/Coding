@@ -29,8 +29,8 @@ error = y - nn_output  # Error of neural network
 
 # (y - y_hat) * f'(h) where h = x.w
 error_term = error * sigmoid_prime(x.dot(w))
-# w_new = w_new + del_w where del_w = - learningrate * (del_E / del_w)
-del_w = learnrate * error_term * x
+# w_new = w_new + del_w ; where del_w = - learnrate * (del_E / del_w)
+del_w = learnrate * (error_term * x)
 
 print("Neural Network output:")
 print(nn_output)

@@ -1,3 +1,8 @@
+"""
+Perceptron is a neural network with single neuron
+"""
+
+
 import numpy as np
 from data_prep import features, targets, features_test, targets_test
 
@@ -24,7 +29,7 @@ learnrate = 0.5
 for e in range(epochs):
     del_w = np.zeros(weights.shape)
     for x, y in zip(features.values, targets):
-        output = sigmoid(weights.dot(x))  # forwar pass
+        output = sigmoid(weights.dot(x))  # forward pass
         # del_E / del_weight = (1/n) * ((y - output) * sigma_prime * x)
         del_w +=  (y - output) * (output * (1 - output)) * x / n_records
     weights += learnrate * del_w
