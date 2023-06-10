@@ -1,3 +1,9 @@
+"""
+Heap Data Structure explanation and Priority Queue ADT (Abstract Data Type).
+
+https://www.youtube.com/watch?v=g9YK6sftDi0
+"""
+
 class Heap:
     """
     Array based implementation
